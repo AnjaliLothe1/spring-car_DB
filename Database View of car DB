@@ -1,0 +1,35 @@
+use advanced_java;
+Database changed
+mysql> create table tbl_carpart(part_no int primary key auto_increment, part_name varchar(30), car_model varchar(35), price double, quantity int);
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> select * from carpart;
+ERROR 1146 (42S02): Table 'advanced_java.carpart' doesn't exist
+mysql> select * from tbl_carpart;
++---------+------------+------------+-------+----------+
+| part_no | part_name  | car_model  | price | quantity |
++---------+------------+------------+-------+----------+
+|       1 | Nut & Bolt | Maruti 800 |   500 |       99 |
+|       2 | Nut & Bolt | Maruti 800 |   500 |       99 |
++---------+------------+------------+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from tbl_carpart;
++---------+------------+------------+-------+----------+
+| part_no | part_name  | car_model  | price | quantity |
++---------+------------+------------+-------+----------+
+|       1 | Nut & Bolt | Maruti 800 |   500 |       99 |
+|       2 | Nut & Bolt | Maruti 800 |   500 |       99 |
++---------+------------+------------+-------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from tbl_carpart;
++---------+--------------+------------+-------+----------+
+| part_no | part_name    | car_model  | price | quantity |
++---------+--------------+------------+-------+----------+
+|       1 | Nut & Bolt   | Maruti 800 |   500 |       99 |
+|       2 | Nut & Bolt   | Maruti 800 |   500 |       99 |
+|       3 | Music System | Ford       |  5999 |       90 |
++---------+--------------+------------+-------+----------+
+3 rows in set (0.00 sec)
+
